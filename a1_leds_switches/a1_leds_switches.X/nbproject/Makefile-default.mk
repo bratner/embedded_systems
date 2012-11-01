@@ -84,12 +84,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${OBJECTDIR}/_ext/1360937237/helpers.o: ../src/helpers.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1360937237 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/helpers.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/helpers.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I".." -MMD -MF "${OBJECTDIR}/_ext/1360937237/helpers.o.d" -o ${OBJECTDIR}/_ext/1360937237/helpers.o ../src/helpers.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/helpers.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I".." -MMD -MF "${OBJECTDIR}/_ext/1360937237/helpers.o.d" -o ${OBJECTDIR}/_ext/1360937237/helpers.o ../src/helpers.c   
 	
 ${OBJECTDIR}/_ext/1360937237/lab1.o: ../src/lab1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1360937237 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/lab1.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/lab1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I".." -MMD -MF "${OBJECTDIR}/_ext/1360937237/lab1.o.d" -o ${OBJECTDIR}/_ext/1360937237/lab1.o ../src/lab1.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/lab1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I".." -MMD -MF "${OBJECTDIR}/_ext/1360937237/lab1.o.d" -o ${OBJECTDIR}/_ext/1360937237/lab1.o ../src/lab1.c   
 	
 else
 ${OBJECTDIR}/_ext/1360937237/helpers.o: ../src/helpers.c  nbproject/Makefile-${CND_CONF}.mk
@@ -115,7 +115,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/a1_leds_switches.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)    -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/a1_leds_switches.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__ICD2RAM=1,--defsym=__DEBUG=1,-L"..",-Map="${DISTDIR}/bratner.X.${IMAGE_TYPE}.map"
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -mdebugger -D__MPLAB_DEBUGGER_REAL_ICE=1 -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/a1_leds_switches.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__ICD2RAM=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_REAL_ICE=1,-L"..",-Map="${DISTDIR}/bratner.X.${IMAGE_TYPE}.map"
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/a1_leds_switches.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 

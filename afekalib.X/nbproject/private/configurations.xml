@@ -3,8 +3,8 @@
   <projectmakefile>Makefile</projectmakefile>
   <defaultConf>0</defaultConf>
   <confs>
-    <conf name="default" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=9004:=0100:=Microchip Technology, Inc. (www.microchip.com):=MPLAB REAL ICE tm (www.microchip.com):=JIT083297824:=x:=en</platformToolSN>
+    <conf name="default" type="3">
+      <platformToolSN></platformToolSN>
       <languageToolchainDir>/opt/microchip/xc32/v1.11/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>

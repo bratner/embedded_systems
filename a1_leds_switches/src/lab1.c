@@ -3,8 +3,8 @@
 #pragma config FPLLMUL = MUL_20, FPLLIDIV = DIV_2, FPLLODIV = DIV_1, FWDTEN = OFF
 #pragma config POSCMOD = HS, FNOSC = PRIPLL, FPBDIV = DIV_8
 
-#define LONG_DELAY 4000
-#define SHORT_DELAY 2000
+#define LONG_DELAY 64000
+#define SHORT_DELAY 32000
 
 void init() {
     TRISF = 0; /* main MUX control bits are output*/
@@ -42,7 +42,7 @@ int main() {
     while (1) {
         prevsw = sw; /* set the previous switches aside */
         sw.all = read_sw(); /* read switches */
-
+        
         /* if function changed - start new function from scratch */
         /*     if( (sw.all & 7) != (prevsw.all & 7))
             stage = 0; */
