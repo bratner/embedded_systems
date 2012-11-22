@@ -1,3 +1,3 @@
 build/default/debug/main.o:  \
 main.c  \
-../afekalib.X/include/helpers.h 
+ /home/bratner/projects/embedded_systems/afekalib.X/include/helpers.h 
